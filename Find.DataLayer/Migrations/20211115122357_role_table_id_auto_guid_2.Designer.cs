@@ -4,14 +4,16 @@ using Find.DataLayer.EfCode;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Find.DataLayer.Migrations
 {
     [DbContext(typeof(EfCoreContext))]
-    partial class EfCoreContextModelSnapshot : ModelSnapshot
+    [Migration("20211115122357_role_table_id_auto_guid_2")]
+    partial class role_table_id_auto_guid_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -11,9 +11,16 @@ namespace Find.DataLayer.EfCode.Configuration
     {
         public void Configure(EntityTypeBuilder<User> entity)
         {
-            entity.Property(p => p.DateCreated)
-                .HasColumnType("date");           
+            // setup a shadow property of on the user entity class. 
+            entity.Property<DateTime>("UpdatedOn")
+                .HasColumnType("date");
 
+            //Other configuration on the user entity class (table)
+            
+            entity.Property(p => p.DateCreated)
+                .HasColumnType("date");
+            entity.Property(p => p.UserId)
+                .HasDefaultValueSql("NEWID()");
             entity.HasIndex(p => p.FirstName);
         }
     }
