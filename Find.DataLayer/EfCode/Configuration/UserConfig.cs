@@ -17,11 +17,11 @@ namespace Find.DataLayer.EfCode.Configuration
 
             //Other configuration on the user entity class (table)
             
-            entity.Property(p => p.DateCreated)
-                .HasColumnType("date");
-            entity.Property(p => p.UserId)
-                .HasDefaultValueSql("NEWID()");
-            entity.HasIndex(p => p.FirstName);
+            //entity.Property(p => p.DateCreated)
+            //    .HasColumnType("date");
+            //entity.Property(p => p.UserId)
+            //    .HasDefaultValueSql("NEWID()");
+            //entity.HasIndex(p => p.FirstName);
         }
     }
 }

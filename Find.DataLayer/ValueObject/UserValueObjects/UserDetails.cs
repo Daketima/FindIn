@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Find.DataLayer.EfClasses;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Summary description for Class1

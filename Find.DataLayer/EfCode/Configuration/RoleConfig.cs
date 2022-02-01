@@ -11,7 +11,7 @@ namespace Find.DataLayer.EfCode.Configuration
     {
         public void Configure(EntityTypeBuilder<Role> entity)
         {
-            entity.Property(p => p.RoleId).HasDefaultValueSql("NEWID()");
+            //entity.Property(p => p.RoleId).HasDefaultValueSql("NEWID()");
         }
     }
 }

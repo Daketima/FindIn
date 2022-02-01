@@ -60,21 +60,21 @@ namespace ServiceLayer.AccountController.Dto
 
         public List<KeyName> UserPossiblyExist { get; private set; }
       
-        public void BeforeDisplay (DbContext context)
-        {
-            AllPossibleUsers = (List<KeyName>)context.Set<User>().Select(x => new KeyName(x.UserId, x.FirstName, x.LastName, x.BVN)).OrderBy(x => x.FirstName);
-        }
+        //public void BeforeDisplay (DbContext context)
+        //{
+        //    AllPossibleUsers = (List<KeyName>)context.Set<User>().Select(x => new KeyName(x.UserId, x.FirstName, x.LastName, x.BVN)).OrderBy(x => x.FirstName);
+        //}
 
-        public void BeforeCreatingCredential(DbContext context)
-        {
-            var JustCreatedUser = (KeyName)context.Set<User>().Select(x => new KeyName(x.FirstName, x.LastName, x.BVN)).FirstOrDefault();
+        //public void BeforeCreatingCredential(DbContext context)
+        //{
+        //    var JustCreatedUser = (KeyName)context.Set<User>().Select(x => new KeyName(x.FirstName, x.LastName, x.BVN)).FirstOrDefault();
           
-        }
+        //}
 
-        public void CheckUserDuplicateBVN(DbContext context)
-        {
-            UserPossiblyExist = (List<KeyName>)context.Set<User>().Select(x => new KeyName(x.UserId, x.FirstName, x.LastName, x.BVN)).OrderBy(x => x.FirstName);           
-        }
+        //public void CheckUserDuplicateBVN(DbContext context)
+        //{
+        //    UserPossiblyExist = (List<KeyName>)context.Set<User>().Select(x => new KeyName(x.UserId, x.FirstName, x.LastName, x.BVN)).OrderBy(x => x.FirstName);           
+        //}
 
         //public void BeforeSaveSetDefaultRole(DbContext context)
         //{
