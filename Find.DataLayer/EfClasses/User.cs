@@ -63,6 +63,21 @@ namespace Find.DataLayer.EfClasses
             LastName = lastName;
         }
 
+        public void SignUp(string Username,  string Password)
+        {
+
+        }
+
+        public void Login(string username, string EncrptedPassword)
+        {
+
+        }
+
+        public void AddToRole(string UserId, string RoleId)
+        {
+            RoleId = RoleId.ToLower();
+        }
+
 
 
     }

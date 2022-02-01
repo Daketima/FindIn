@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Find.ServiceLayer\Find.ServiceLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\rootui-html\node_modules\" />
+  </ItemGroup>
+
 </Project>
