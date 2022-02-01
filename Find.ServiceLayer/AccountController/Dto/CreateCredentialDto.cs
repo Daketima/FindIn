@@ -4,7 +4,7 @@ using System;
 
 namespace ServiceLayer.AccountController.Dto
 {
-    public class AddCredentialDto : ILinkToEntity<LoginCredential>
+    public class CreateCredentialDto : ILinkToEntity<LoginCredential>
     {
         public int Id { get; set; }
         public Guid UserId { get; set; }

@@ -7,14 +7,11 @@ using System.Text;
 
 namespace Find.DataLayer.EfCode.Configuration
 {
-    public class UserRoleConfig : IEntityTypeConfiguration<UserRole>
+    public class RoleConfig : IEntityTypeConfiguration<Role>
     {
-        public void Configure(EntityTypeBuilder<UserRole> entity)
+        public void Configure(EntityTypeBuilder<Role> entity)
         {
-            entity.HasKey(p => new { p.RoleId, p.UserId });
-
-           
-                
+            entity.Property(p => p.RoleId).HasDefaultValueSql("NEWID()");
         }
     }
 }

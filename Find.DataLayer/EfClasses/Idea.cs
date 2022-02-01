@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Find.DataLayer.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Find.DataLayer.EfClasses
 {
-    public class Idea
-    {
-        public int IdeaId { get; set; }
+    public class Idea : Entity
+    {       
         public string Name { get; set; }
         public string Description { get; set; }
         public string ProjectAreaId { get; set; }
@@ -21,5 +21,8 @@ namespace Find.DataLayer.EfClasses
         public string DateApproved { get; set; }
         public string CompanyId { get; set; }
         public string StatusId { get; set; }
+        
+
+        public Idea() { }
     }
 }

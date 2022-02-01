@@ -2,6 +2,7 @@
 using Find.DataLayer.EfCode.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Reflection;
 
 namespace Find.DataLayer.EfCode
 {
@@ -18,8 +19,11 @@ namespace Find.DataLayer.EfCode
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new UserConfig());
-            builder.ApplyConfiguration(new UserRoleConfig());
+            //builder.ApplyConfiguration(new UserConfig());
+            //builder.ApplyConfiguration(new UserRoleConfig());
+            //builder.ApplyConfiguration(new RoleConfig());
+
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

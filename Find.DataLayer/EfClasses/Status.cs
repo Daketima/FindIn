@@ -1,12 +1,19 @@
-﻿using System;
+﻿using Find.DataLayer.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Find.DataLayer.EfClasses
 {
-    public class Status
-    {
-        public int Id { get; set; }
+    public class Status : Entity
+    {       
         public string Name { get; set; }
+
+        public Status()
+        {
+
+        }
     }
+
+   
 }

@@ -4,12 +4,13 @@ using System.Text;
 
 namespace Find.DataLayer.EfClasses
 {
-    public class Area
-    {
-        public int Id { get; set; }
+    public class Area : Entity
+    {        
         public string Name { get; set; }
         public string Description { get; set; }
         public string DateCreated { get; set; }
         public bool IsActive { get; set; }
+
+        public Area () { }
     }
 }
