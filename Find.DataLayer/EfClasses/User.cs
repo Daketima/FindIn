@@ -1,38 +1,54 @@
-﻿using Find.DataLayer.Abstractions;
-using StatusGeneric;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Text;
 
 namespace Find.DataLayer.EfClasses
 {
-    public  class User : Entity
+   public class User
     {
-        public LoginCredential UserLoginDetail { get; private set;}      
+        public Guid UserId { get; set; }
         
-        public HashSet<Idea> _idea;
+        [Required]
+        [MaxLength(50)]
+        public string FirstName { get; set; }
         
-        public HashSet<UserRole> _userRole;
+        public string MiddleName { get; set; }
         
-        public LoginCredential _loginCredential;
+        [Required]
+        [MaxLength(50)]
+        public string LastName { get; set; }
         
-        public HashSet<Company> _company;
+        [Required]
+        public int Gender { get; set; }        
+     
+        public string HomeAddress { get; set; }
+       
+        [Required]
+        [MaxLength(11)]
+        public string BVN { get; set; }               
+        
+        public bool IsActive { get; set; }
+       
+        public int MaritalStatusId { get; set; }
+        
+        public DateTime DateCreated { get; set; }
 
+    
+        public HashSet<EducationBackground> _EeducationBackGround;
+        public HashSet<Address> _userAddress;
+        public HashSet<Idea> _idea;
+        public HashSet<UserRole> _UserRole;
+        public HashSet<LoginCredential> _loginCredential;
 
         //-------------------------------------------------------------------
         // Other tables reletionship
 
-       // public Address Address => _userAddress;
-        
-        public LoginCredential LoginCredential => _loginCredential;
-        
-        public ICollection<UserRole> UserRole => _userRole?.ToList();
-        
-        public ICollection<Idea> Idea => _idea?.ToList();
-       
-        //public ICollection<Company> Company => _company?.ToList();
+        public Address Address { get; set; }
+        public LoginCredential LoginCredentil { get; set; }
+        public IList<UserRole> UserRole { get; set; }
+        public IList<Idea> Idea { get; set; }
+        public IList<Company> Company { get; set; }
 
 
         public User()
@@ -40,57 +56,28 @@ namespace Find.DataLayer.EfClasses
 
         }
 
-        
-
-
-
-
-        public User(string firstName, string middleName, string lastName, int genderId, string bvn, DateTime dateOfBirth, int maritalStatusId)
+        public User (string firstName, string middleName, string lastName)
         {
-           // if (string.IsNullOrEmpty(firstName))
-             //   throw new ArgumentNullException(nameof(firstName));
-
-            //FirstName = firstName;
-            //MiddleName = middleName;
-            //LastName = lastName;
-            //GenderId = genderId;
-            //DateOfBirth = dateOfBirth;
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
         }
 
-        public User(string firstName, string middleName, string lastName, int genderId, string bvn, DateTime dateOfBirth, int maritalStatusId, string email, string secret)
-        {
-        //    FirstName = firstName;
-        //    MiddleName = middleName;
-        //    LastName = lastName;
-        //    GenderId = genderId;
-        //    DateOfBirth = dateOfBirth;
-            _loginCredential = new LoginCredential(email: email, secret: secret);
-        }
-
-        public static IStatusGeneric<User> CreateUser(string firstName, string middleName, string lastName, int genderId, string bvn, DateTime dateOfBirth, int maritalStatusId, string email, string secret)
-        {
-            StatusGenericHandler<User> status = new StatusGenericHandler<User>();
-
-            User user = new User
-            {
-                //FirstName = firstName,
-                //MiddleName = middleName,
-                //LastName = lastName,
-                //GenderId = genderId,
-                //DateOfBirth = dateOfBirth,
-                //MaritalStatusId = maritalStatusId,
-                //_loginCredential = new LoginCredential(email, secret)
-            };
-
-            return status.SetResult(user);
-        }
-
-        public void SetuserCredential(string email, string secret) { }
-
-        public void LoginUser()
+        public void SignUp(string Username,  string Password)
         {
 
         }
+
+        public void Login(string username, string EncrptedPassword)
+        {
+
+        }
+
+        public void AddToRole(string UserId, string RoleId)
+        {
+            RoleId = RoleId.ToLower();
+        }
+
 
 
     }

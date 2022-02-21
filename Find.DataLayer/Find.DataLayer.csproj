@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Find.GenericServices\Find.GenericServices.csproj" />
+    <ProjectReference Include="..\PermissionParts\PermissionParts.csproj" />
+    <ProjectReference Include="..\RefreshClaimsParts\RefreshClaimsParts.csproj" />
   </ItemGroup>
 
 </Project>
