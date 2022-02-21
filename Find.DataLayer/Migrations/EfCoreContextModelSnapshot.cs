@@ -8,327 +8,213 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Find.DataLayer.Migrations
 {
-    [DbContext(typeof(EfCoreContext))]
-    partial class EfCoreContextModelSnapshot : ModelSnapshot
-    {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
-#pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.10")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+    //[DbContext(typeof(EfCoreContext))]
+//    partial class EfCoreContextModelSnapshot : ModelSnapshot
+//    {
+////        protected override void BuildModel(ModelBuilder modelBuilder)
+////        {
+////#pragma warning disable 612, 618
+////            modelBuilder
+////                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+////                .HasAnnotation("ProductVersion", "5.0.10")
+////                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Address", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////            modelBuilder.Entity("Find.DataLayer.EfClasses.Idea", b =>
+////                {
+////                    b.Property<long>("Id")
+////                        .ValueGeneratedOnAdd()
+////                        .HasColumnType("bigint")
+////                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Country")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("ApprovalComment")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserAddress")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("ApprovedBy")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+////                    b.Property<string>("CompanyId")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+////                    b.Property<Guid>("CreatedBy")
+////                        .HasColumnType("uniqueidentifier");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+////                    b.Property<string>("DateApproved")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Address");
-                });
+////                    b.Property<DateTime>("DateCreated")
+////                        .HasColumnType("datetime2");
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Company", b =>
-                {
-                    b.Property<int>("CompanyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////                    b.Property<string>("Description")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("DevelopmentTechnology")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContactPerson")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("EstimatedtimeLine")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("ExpectedIncome")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("Name")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RegistrationDate")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("ProjectAreaId")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RgistrationNumber")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("ProposedCost")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+////                    b.HasKey("Id");
 
-                    b.HasKey("CompanyId");
+////                    b.ToTable("Idea");
+////                });
 
-                    b.HasIndex("UserId");
+////            modelBuilder.Entity("Find.DataLayer.EfClasses.Offer", b =>
+////                {
+////                    b.Property<long>("Id")
+////                        .ValueGeneratedOnAdd()
+////                        .HasColumnType("bigint")
+////                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.ToTable("Company");
-                });
+////                    b.Property<DateTime>("DateCreate")
+////                        .HasColumnType("datetime2");
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Idea", b =>
-                {
-                    b.Property<int>("IdeaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////                    b.Property<string>("IdeaId")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ApprovalComment")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("IdeaOwnerComment")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ApprovedBy")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("Proposal")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CompanyId")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("Status")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
+////                    b.Property<string>("UserId")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DateApproved")
-                        .HasColumnType("nvarchar(max)");
+////                    b.HasKey("Id");
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+////                    b.ToTable("Offer");
+////                });
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+////            modelBuilder.Entity("Find.DataLayer.EfClasses.User", b =>
+////                {
+////                    b.Property<long>("UserId")
+////                        .ValueGeneratedOnAdd()
+////                        .HasColumnType("bigint")
+////                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("DevelopmentTech")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("BVN")
+////                        .IsRequired()
+////                        .HasMaxLength(11)
+////                        .HasColumnType("nvarchar(11)");
 
-                    b.Property<string>("ExpectedIncome")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<DateTime>("DateCreated")
+////                        .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("FirstName")
+////                        .IsRequired()
+////                        .HasMaxLength(50)
+////                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("ProjectAreaId")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<int>("Gender")
+////                        .HasColumnType("int");
 
-                    b.Property<string>("ProposedCost")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("HomeAddress")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProposedtimeLine")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<bool>("IsActive")
+////                        .HasColumnType("bit");
 
-                    b.Property<string>("StatusId")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("LastName")
+////                        .IsRequired()
+////                        .HasMaxLength(50)
+////                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uniqueidentifier");
+////                    b.Property<int>("MaritalStatusId")
+////                        .HasColumnType("int");
 
-                    b.HasKey("IdeaId");
+////                    b.Property<string>("MiddleName")
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("UserId");
+////                    b.HasKey("UserId");
 
-                    b.ToTable("Idea");
-                });
+////                    b.ToTable("User");
+////                });
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.LoginCredential", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////            modelBuilder.Entity("Find.DataLayer.ExtraAuthClasses.ModulesForUser", b =>
+////                {
+////                    b.Property<string>("UserId")
+////                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("CredentialType")
-                        .HasColumnType("int");
+////                    b.Property<long>("AllowedPaidForModules")
+////                        .HasColumnType("bigint");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+////                    b.HasKey("UserId");
 
-                    b.Property<string>("Secret")
-                        .HasColumnType("nvarchar(max)");
+////                    b.ToTable("UserModule");
+////                });
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+////            modelBuilder.Entity("Find.DataLayer.ExtraAuthClasses.RoleToPermission", b =>
+////                {
+////                    b.Property<string>("RoleName")
+////                        .HasMaxLength(100)
+////                        .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("Id");
+////                    b.Property<string>("Description")
+////                        .IsRequired()
+////                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+////                    b.HasKey("RoleName");
 
-                    b.ToTable("LoginCredential");
-                });
+////                    b.ToTable("RoleToPermission");
+////                });
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.MaritalStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////            modelBuilder.Entity("Find.DataLayer.ExtraAuthClasses.TimeStore", b =>
+////                {
+////                    b.Property<string>("key")
+////                        .HasMaxLength(36)
+////                        .HasColumnType("nvarchar(36)");
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+////                    b.Property<long>("LastUpdateTicks")
+////                        .HasColumnType("bigint");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+////                    b.HasKey("key");
 
-                    b.HasKey("Id");
+////                    b.ToTable("TimeStore");
+////                });
 
-                    b.ToTable("MaritalStatus");
-                });
+////            modelBuilder.Entity("Find.DataLayer.ExtraAuthClasses.UserToRole", b =>
+////                {
+////                    b.Property<string>("UserId")
+////                        .HasMaxLength(36)
+////                        .HasColumnType("nvarchar(36)");
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Role", b =>
-                {
-                    b.Property<Guid>("RoleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+////                    b.Property<string>("RoleName")
+////                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+////                    b.Property<string>("RoleName1")
+////                        .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("RoleId");
+////                    b.HasKey("UserId", "RoleName");
 
-                    b.ToTable("Role");
-                });
+////                    b.HasIndex("RoleName1");
 
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Status", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+////                    b.ToTable("UserToRole");
+////                });
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+////            modelBuilder.Entity("Find.DataLayer.ExtraAuthClasses.UserToRole", b =>
+////                {
+////                    b.HasOne("Find.DataLayer.ExtraAuthClasses.RoleToPermission", "Role")
+////                        .WithMany()
+////                        .HasForeignKey("RoleName1");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Status");
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.User", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("BVN")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("date");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
-
-                    b.Property<string>("HomeAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("MaritalStatusId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("MiddleName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId");
-
-                    b.HasIndex("FirstName");
-
-                    b.ToTable("User");
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.UserRole", b =>
-                {
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("RoleId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRole");
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Address", b =>
-                {
-                    b.HasOne("Find.DataLayer.EfClasses.User", null)
-                        .WithOne("Address")
-                        .HasForeignKey("Find.DataLayer.EfClasses.Address", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Company", b =>
-                {
-                    b.HasOne("Find.DataLayer.EfClasses.User", null)
-                        .WithMany("Company")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.Idea", b =>
-                {
-                    b.HasOne("Find.DataLayer.EfClasses.User", null)
-                        .WithMany("Idea")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.LoginCredential", b =>
-                {
-                    b.HasOne("Find.DataLayer.EfClasses.User", null)
-                        .WithOne("LoginCredentil")
-                        .HasForeignKey("Find.DataLayer.EfClasses.LoginCredential", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.UserRole", b =>
-                {
-                    b.HasOne("Find.DataLayer.EfClasses.User", null)
-                        .WithMany("UserRole")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Find.DataLayer.EfClasses.User", b =>
-                {
-                    b.Navigation("Address");
-
-                    b.Navigation("Company");
-
-                    b.Navigation("Idea");
-
-                    b.Navigation("LoginCredentil");
-
-                    b.Navigation("UserRole");
-                });
-#pragma warning restore 612, 618
-        }
-    }
+////                    b.Navigation("Role");
+////                });
+////#pragma warning restore 612, 618
+////        }
+//    }
 }

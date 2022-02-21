@@ -10,7 +10,7 @@ namespace Find.DataLayer.EfCode
 {
     public class ExtraAuthorizedDbContext : DbContext, ITimeStore
     {
-        private readonly IAuthenticationChanges _authChange;
+        private readonly IAuthChanges _authChange;
 
         public DbSet<UserToRole> UserToRole { get; internal set; }
 

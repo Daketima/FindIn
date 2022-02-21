@@ -1,6 +1,4 @@
-﻿using Find.DataLayer.EfClasses;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
@@ -28,9 +26,7 @@ public class UserDetail
     public DateTime DateCreated { get; set; }
 
 
-    public HashSet<EducationBackground> educationBackGround;
-
-    public Address _userAddress;
+    
     public UserDetail()
 	{
 		//

@@ -27,6 +27,7 @@ namespace Find.DataLayer.ExtraAuthClasses
         /// <summary>
         /// ShortName of the role
         /// </summary>
+        [Key]
         [Required(AllowEmptyStrings = false)]
         [MaxLength(ExtraAuthConstants.RoleNameSize)]
         public string RoleName { get; private set; }
@@ -50,7 +51,7 @@ namespace Find.DataLayer.ExtraAuthClasses
             var status = new StatusGenericHandler<RoleToPermission>();
             if(context.Find<RoleToPermission>(roleName) != null)
             {
-                status.AddError("That role already exists");
+                status.AddError($"{nameof(roleName)} role already exists");
                 return status;
             }
             return status.SetResult(new RoleToPermission(roleName, description, permissionInRole));

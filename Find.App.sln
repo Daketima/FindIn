@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find.ServiceLayer", "Find.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefreshClaimsParts", "RefreshClaimsParts\RefreshClaimsParts.csproj", "{E15C5191-D1C2-4250-BCE6-69EAF161218B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermissionParts", "PermissionParts\PermissionParts.csproj", "{616318E4-C471-4913-A048-480E6BB64463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermissionParts", "PermissionParts\PermissionParts.csproj", "{616318E4-C471-4913-A048-480E6BB64463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

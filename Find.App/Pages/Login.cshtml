@@ -4,32 +4,174 @@
     
 }
 
-<section class="probootstrap-section">
+@*<section class="probootstrap-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center section-heading">
-                <h2>Log in</h2>
-            </div>
+    <div class="row">
+    <div class="col-md-12 text-center section-heading">
+    <h2>Log in</h2>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <form method="post" class="probootstrap-form probootstrap-form-box">
+    <div class="form-group">
+    <label for="username">Username</label>
+    <input name="username" id="username" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="username">Password</label>
+    <input type="password" name="password" id="password" class="form-control">
+    </div>
+    <div class="form-group mb50">
+    <input type="submit" value="Log in" class="btn btn-primary btn-block">
+    </div>
+    <div class="form-group text-center">
+    <p class="form-note-link"><small><a href="signup.html">Don't have an account? Sign Up for free</a></small> <br> <small><a href="#">Forgot password?</a></small></p>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </section>*@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FindIn | Sign In</title>
+    <meta name="description" content="RootUI - clean and powerful solution for your Dashboards, Administration areas.">
+    <meta name="keywords" content="admin, dashboard, template, react, reactjs, html, jquery, clean">
+    <meta name="author" content="nK">
+    <link rel="icon" type="image/png" href="../rootui-html/build/assets/images/favicon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400%7cOpen+Sans:300,400,600%7cPT+Serif:400i">
+
+    <link rel="stylesheet" href="./rootui-html/build/assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="./rootui-html/build/assets/css/rootui.css">
+    <link rel="stylesheet" href="./rootui-html/build/assets/css/rootui-night.css" media="(night)" class="rui-nightmode-link">
+    <link rel="stylesheet" href="./rootui-html/build/assets/css/custom.css">
+</head>
+<body>
+    <div class="rui-page-preloader" role="status">
+        <div class="rui-page-preloader-inner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <form method="post" class="probootstrap-form probootstrap-form-box">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input name="username" id="username" class="form-control">
+    </div>
+    <div class="rui-main">
+        <div class="rui-sign">
+            <div class="row w-100">
+                <div class="col-lg-6">
+                    <div class="bg-image">
+                        <div style="background-image: url('./rootui-html/build/assets/images/bg-sign.png');"></div>
                     </div>
-                    <div class="form-group">
-                        <label for="username">Password</label>
-                        <input type="password" name="password" id="password" class="form-control">
-                    </div>
-                    <div class="form-group mb50">
-                        <input type="submit" value="Log in" class="btn btn-primary btn-block">
-                    </div>
-                    <div class="form-group text-center">
-                        <p class="form-note-link"><small><a href="signup.html">Don't have an account? Sign Up for free</a></small> <br> <small><a href="#">Forgot password?</a></small></p>
-                    </div>
-                </form>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    <form method="post" class="form rui-sign-form">
+                        <div class="row vertical-gap sm-gap justify-content-center">
+                            <div class="col-12">
+                                <h1 class="display-4 mb-10 text-center">Sign In</h1>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                    <label class="custom-control-label fs-13" for="rememberMe">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="fs-13">Forget password?</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="dashboard.html" class="btn btn-brand btn-block text-center">Sign in</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="rui-sign-or mt-2 mb-5">or</div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="rui-social-links">
+                                    <li><a href="dashboard.html" class="rui-social-github"><span class="fab fa-github"></span> Github</a></li>
+                                    <li><a href="dashboard.html" class="rui-social-facebook"><span class="fab fa-facebook-f"></span> Facebook</a></li>
+                                    <li><a href="dashboard.html" class="rui-social-google"><span class="fab fa-google"></span> Google</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 text-center text-grey-5 fs-13">Don't you have an account? <a asp-page="Register" class="text-2">Sign Up</a></div>
+                        </div>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </div>
-</section>
+    <script src="./rootui-html/build/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/feather-icons/dist/feather.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/fontawesome-free/js/all.js"></script>
+    <script src="./rootui-html/build/assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+    <script src="./rootui-html/build/assets/js/rootui.js"></script>
+    <script src="./rootui-html/build/assets/js/rootui-init.js"></script>
+</body>
+</html>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                    <label class="custom-control-label fs-13" for="rememberMe">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="fs-13">Forget password?</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="dashboard.html" class="btn btn-brand btn-block text-center">Sign in</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="rui-sign-or mt-2 mb-5">or</div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="rui-social-links">
+                                    <li><a href="dashboard.html" class="rui-social-github"><span class="fab fa-github"></span> Github</a></li>
+                                    <li><a href="dashboard.html" class="rui-social-facebook"><span class="fab fa-facebook-f"></span> Facebook</a></li>
+                                    <li><a href="dashboard.html" class="rui-social-google"><span class="fab fa-google"></span> Google</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 text-center text-grey-5 fs-13">Don't you have an account? <a asp-page="Register" class="text-2">Sign Up</a></div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./rootui-html/build/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/feather-icons/dist/feather.min.js"></script>
+    <script src="./rootui-html/build/assets/vendor/fontawesome-free/js/all.js"></script>
+    <script src="./rootui-html/build/assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+    <script src="./rootui-html/build/assets/js/rootui.js"></script>
+    <script src="./rootui-html/build/assets/js/rootui-init.js"></script>
+</body>
+</html>
