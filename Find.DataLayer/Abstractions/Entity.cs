@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Find.DataLayer.Abstractions
 {
-    public abstract class Entity : IEntity
+    public abstract class Entity 
     {
         public long Id { get; private set; }
 
@@ -26,7 +26,7 @@ namespace Find.DataLayer.Abstractions
 
         public static bool operator ==(Entity a, Entity b)
         {
-            if(ReferenceEquals(a, nul) && ReferenceEquals(b, null))
+            if(ReferenceEquals(a, null) && ReferenceEquals(b, null))
                 return false;
             if(ReferenceEquals(a, null) || ReferenceEquals(b, null))
                 return true;
@@ -35,7 +35,7 @@ namespace Find.DataLayer.Abstractions
 
         public static bool operator !=(Entity a, Entity b)
         {
-            return !(a == b)
+            return !(a == b);
         }
 
         public override int GetHashCode()

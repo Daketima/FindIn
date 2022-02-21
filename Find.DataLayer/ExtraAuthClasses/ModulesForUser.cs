@@ -2,6 +2,7 @@
 using PermissionParts;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Find.DataLayer.ExtraAuthClasses
@@ -23,6 +24,10 @@ namespace Find.DataLayer.ExtraAuthClasses
             AllowedPaidForModules  = allowedPaidForModuled;
         }
 
+        public ModulesForUser() { }
+
+        [Key]
+        //[MaxLength(ExtraAuthConstants.UserIdSize)]
         public string UserId { get; private set; }
         public PaidForModules AllowedPaidForModules { get; private set; }
     }

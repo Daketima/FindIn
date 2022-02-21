@@ -1,7 +1,9 @@
+using Find.DataLayer.EfClasses;
 using Find.DataLayer.EfCode;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,7 @@ namespace Find.App
         {
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddDbContext<EfCoreContext>(opt => opt.UseSqlServer(Configuration["ConnectionString:DefaultConnection"], x => x.MigrationsAssembly("Find.DataLayer")));
+            services.AddDefaultIdentity<IdentityUser>(option => option.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EfCoreContext>();
             services.AddRazorPages();
         }
 

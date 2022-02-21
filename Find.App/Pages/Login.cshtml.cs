@@ -12,5 +12,10 @@ namespace Find.App.Pages
         public void OnGet()
         {
         }
+
+        public IActionResult OnPost()
+        {
+            return Page();
+        }
     }
 }

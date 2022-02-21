@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Find.DataLayer.EfCode;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -7,7 +8,7 @@ namespace Find.DataLayer.EfClasses
 {
    public class User
     {
-        public Guid UserId { get; set; }
+        public long UserId { get; set; }
         
         [Required]
         [MaxLength(50)]
@@ -32,23 +33,7 @@ namespace Find.DataLayer.EfClasses
        
         public int MaritalStatusId { get; set; }
         
-        public DateTime DateCreated { get; set; }
-
-    
-        public HashSet<EducationBackground> _EeducationBackGround;
-        public HashSet<Address> _userAddress;
-        public HashSet<Idea> _idea;
-        public HashSet<UserRole> _UserRole;
-        public HashSet<LoginCredential> _loginCredential;
-
-        //-------------------------------------------------------------------
-        // Other tables reletionship
-
-        public Address Address { get; set; }
-        public LoginCredential LoginCredentil { get; set; }
-        public IList<UserRole> UserRole { get; set; }
-        public IList<Idea> Idea { get; set; }
-        public IList<Company> Company { get; set; }
+        public DateTime DateCreated { get; set; }      
 
 
         public User()
@@ -63,7 +48,7 @@ namespace Find.DataLayer.EfClasses
             LastName = lastName;
         }
 
-        public void SignUp(string Username,  string Password)
+        public void SignUp(string Username,  string Password, EfCoreContext context)
         {
 
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Summary description for Class1
@@ -25,9 +26,7 @@ public class UserDetail
     public DateTime DateCreated { get; set; }
 
 
-    public HashSet<EducationBackground> educationBackGround;
-
-    public Address _userAddress;
+    
     public UserDetail()
 	{
 		//
